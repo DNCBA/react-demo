@@ -3,6 +3,7 @@ import {createStore} from "redux";
 import todo from "./reducers/todo";
 import {Provider} from "react-redux";
 import TodoPage from "./pages/TodoPage";
+import React from "react";
 
 // 创建store,绑定对应的reducer和项目
 const store = createStore(todo);

@@ -1,14 +1,28 @@
+let nextId = 1;
 export const addTodo = (text) => {
     return {
         type: "ADD_TODO",
-        text: text
+        body: {
+            "id": nextId++,
+            "text": text,
+            "flag": false
+        }
     }
-}
+};
 
 
-export const deleteTodo = (id) => {
+export const completeTodo = (ids) => {
+    return {
+        type: "COMPLETE_TODO",
+        ids: ids
+    }
+};
+
+
+export const deleteTodo = (ids) => {
     return {
         type: "DELETE_TODO",
-        id: id
+        ids: ids
     }
-}
+};
+

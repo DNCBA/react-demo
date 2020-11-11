@@ -4,6 +4,8 @@
 /node_modules
 /.idea
 /.pnp
+/config
+/scripts
 .pnp.js
 
 
@@ -23,3 +25,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
