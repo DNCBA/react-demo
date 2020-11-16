@@ -33,4 +33,11 @@ const todo = (state = defaultState, action) => {
     }
 }
 
+
+export const getTodoList = (state) => {
+    //你可以做其他的业务逻辑对数据进行处理并且可以公用
+    return state.todoList;
+}
+
+
 export default todo;

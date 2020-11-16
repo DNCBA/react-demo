@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {addTodo, completeTodo, deleteTodo} from "../actions/todo";
 import {Divider, Input, Form, Button, Row, Col, List, Checkbox} from "antd";
+import {getTodoList} from "../reducers/todo";
 
 class TodoPage extends React.Component {
 
@@ -109,7 +110,7 @@ class TodoPage extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        todoList: state.todoList
+        todoList: getTodoList(state)
     };
 }
 
