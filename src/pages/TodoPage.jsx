@@ -69,11 +69,10 @@ class TodoPage extends React.Component {
                     <List
                         dataSource={this.props.todoList}
                         renderItem={item => (
-
-                            <Row>
+                            <Row key={item.id}>
                                 <Col span={6} push={2}>
-                                    <Checkbox defaultChecked={this.state.selectList.some(it => it === item.id)}
-                                              onChange={(e) => this.addSelectList(e, item.id)}>{item.id}</Checkbox>
+                                    <Checkbox
+                                        onChange={(e) => this.addSelectList(e, item.id)}>{item.id}</Checkbox>
                                 </Col>
                                 <Col span={9} push={2}>
                                     {item.text}
